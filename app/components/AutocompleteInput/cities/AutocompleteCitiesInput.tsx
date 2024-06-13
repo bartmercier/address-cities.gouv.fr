@@ -43,7 +43,7 @@ function AutocompleteCitiesInput() {
   return (
     <>
       <div className="input">
-        <input type="text" value={searchTerm} onChange={onInputValueChange} />
+        <input type="text" value={searchTerm} onChange={onInputValueChange} placeholder='saisissez une ville' />
       </div>
       {showResults && <div className="results">{results}</div>}
     </>

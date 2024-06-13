@@ -49,7 +49,7 @@ function AutocompleteAddressInput() {
   return (
     <>
       <div className="input">
-        <input type="text" value={searchTerm} onChange={onInputValueChange} />
+        <input type="text" value={searchTerm} onChange={onInputValueChange} placeholder='saisissez une adresse' />
       </div>
       {showResults && <div className="results">{results}</div>}
     </>
