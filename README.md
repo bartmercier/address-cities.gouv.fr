@@ -7,7 +7,7 @@ It is overseen by the Interministerial Digital Department (DINUM), which is resp
 
 Its construction is ensured by a number of partners, first and foremost the communes, the only competent authorities in terms of addressing.
 
-The Base Adresse Nationale is accessible in the form of files and APIs.
+The  Adresse Nationale database is accessible in the form of files and APIs.
 The Address API not only enables you to quickly search for an address, but also to associate coordinates with an address ("geocode") according to several criteria. 
 The API request frequency limit is set at 50 calls / second / IP 
 
