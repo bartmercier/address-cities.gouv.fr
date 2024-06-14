@@ -19,8 +19,10 @@ export type Address = {
 }
 
   export const getAddressByName = async (searchTerm: string) => {
-    if (searchTerm.length < 3) return [];
+    if (searchTerm.length < 3) return []; // At least, three characters are mandatory.
     searchTerm = searchTerm.replaceAll(" ","+")
+    searchTerm.endsWith("+")? searchTerm.substring(0,searchTerm.length-1):searchTerm;
+
     const response = await fetch(
       `https://api-adresse.data.gouv.fr/search/?q=${searchTerm}`,
       {

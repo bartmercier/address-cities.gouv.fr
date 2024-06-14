@@ -5,12 +5,15 @@ import AutocompleteCitiesInput from "./components/AutocompleteInput/cities/Autoc
 export default function Home() {
   return (
     <>
-        <div className="header">
-    <h1>Autocomplete</h1>
-  </div>
-  <div className="content">
-    <AutocompleteCitiesInput /> <AutocompleteAddressInput/>
-  </div>
+    <div className="header">
+        <div className="content-center">
+          <div className="flex flex-col w-3/6 space-y-4">
+            <div></div>
+            <div><AutocompleteCitiesInput /></div>
+            <div><AutocompleteAddressInput /></div>
+          </div>
+        </div>
+    </div>
     </>
 
   );

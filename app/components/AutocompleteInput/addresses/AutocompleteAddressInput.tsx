@@ -6,6 +6,7 @@ import {
   getAddressByName,
 } from '@/app/api/AddressService';
 import debounce from 'lodash.debounce';
+import { Input } from '@/components/ui/input';
 
 
 
@@ -14,6 +15,7 @@ function AutocompleteAddressInput() {
   const [searchResult, setSearchResult] = useState<AddressPropertiesArray>([]);
   const [showResults, setShowResults] = useState(false);
 
+
   
   const searchAddreses = async (value: string) =>
   {
@@ -21,6 +23,7 @@ function AutocompleteAddressInput() {
   }
 
   const debouncedSearchCities = useMemo(() => debounce(searchAddreses, 500), []);
+
 
   const onInputValueChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setShowResults(event.target.value !== '');
@@ -48,10 +51,12 @@ function AutocompleteAddressInput() {
 
   return (
     <>
+    <div className='w-4/6'>
       <div className="input">
-        <input type="text" value={searchTerm} onChange={onInputValueChange} placeholder='saisissez une adresse' />
+        <Input type="text" value={searchTerm} onChange={onInputValueChange}   placeholder='saisissez une adresse' />
       </div>
       {showResults && <div className="results">{results}</div>}
+    </div>
     </>
   );
 }

@@ -6,6 +6,8 @@ import {
   GetCitiesByNameResponse,
 } from '@/app/api/CityService';
 import debounce from 'lodash.debounce';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
 
 function AutocompleteCitiesInput() {
   const [searchTerm, setSearchTerm] = useState<string>('');
@@ -42,10 +44,13 @@ function AutocompleteCitiesInput() {
 
   return (
     <>
-      <div className="input">
-        <input type="text" value={searchTerm} onChange={onInputValueChange} placeholder='saisissez une ville' />
+      <div className='w-4/6'>
+        <div className="input">
+          <Input type="text" className="rounded-sm" value={searchTerm} onChange={onInputValueChange} placeholder='saisissez une ville' />
+        </div>
+        {showResults && <div className="results">{results}</div>}
       </div>
-      {showResults && <div className="results">{results}</div>}
+
     </>
   );
 }
