@@ -1,4 +1,16 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Objectives
+The French National Address Database is one of the nine databases of the public reference data service. It is the only address database officially recognized by the French government.
+
+A digital service for shared use, and the infrastructure on which many public policies are based, it is part of the State's information and communication system, and as such falls under the responsibility of the Prime Minister.
+
+It is overseen by the Interministerial Digital Department (DINUM), which is responsible for defining its governance and operating procedures (following a decision by the Prime Minister).
+
+Its construction is ensured by a number of partners, first and foremost the communes, the only competent authorities in terms of addressing.
+
+The  Adresse Nationale database is accessible in the form of files and APIs.
+The Address API not only enables you to quickly search for an address, but also to associate coordinates with an address ("geocode") according to several criteria. 
+The API request frequency limit is set at 50 calls / second / IP 
+
 
 ## Getting Started
 
